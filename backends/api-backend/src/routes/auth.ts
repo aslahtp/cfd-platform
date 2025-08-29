@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { User } from "../models/user";
+import { User } from "../models/User";
 import { generateToken } from "../services/jwt";
 
 const authRoutes = express.Router();

@@ -1,8 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import connectDB from "./services/database";
-import authRoutes from "./routes/auth";
 import cors from "cors";
+
+import connectDB from "./services/database";
+
+import walletRoutes from "./routes/wallet";
+import authRoutes from "./routes/auth";
 
 dotenv.config();
 
@@ -18,6 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/wallet", walletRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
