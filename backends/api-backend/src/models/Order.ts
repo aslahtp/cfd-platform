@@ -1,7 +1,13 @@
 import mongoose from "mongoose";
 
 export type OrderSide = "buy" | "sell";
-export type OrderStatus = "new" | "open" | "partial" | "filled" | "canceled" | "rejected";
+export type OrderStatus =
+  | "new"
+  | "open"
+  | "partial"
+  | "filled"
+  | "canceled"
+  | "rejected";
 
 export interface IOrder extends mongoose.Document {
   userId: string;

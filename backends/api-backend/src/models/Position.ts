@@ -28,4 +28,5 @@ const positionSchema = new mongoose.Schema<IPosition>(
 positionSchema.index({ userId: 1, instrument: 1 }, { unique: true });
 
 export const Position =
-  mongoose.models.Position || mongoose.model<IPosition>("Position", positionSchema);
+  mongoose.models.Position ||
+  mongoose.model<IPosition>("Position", positionSchema);
