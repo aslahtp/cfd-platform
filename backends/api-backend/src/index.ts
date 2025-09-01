@@ -6,6 +6,7 @@ import connectDB from "./services/database";
 
 import walletRoutes from "./routes/wallet";
 import authRoutes from "./routes/auth";
+import orderRoutes from "./routes/order";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/auth", authRoutes);
 app.use("/wallet", walletRoutes);
+app.use("/order", orderRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
